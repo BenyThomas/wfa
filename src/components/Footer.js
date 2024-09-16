@@ -12,9 +12,15 @@ const Footer = () => {
         <div className="text-center">
           <h4 className="text-lg font-semibold">Follow Us</h4>
           <div className="flex space-x-4 mt-2">
-            <a href="#"><i className="fab fa-facebook text-white"></i></a>
-            <a href="#"><i className="fab fa-twitter text-white"></i></a>
-            <a href="#"><i className="fab fa-instagram text-white"></i></a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-facebook text-white text-2xl"></i>
+            </a>
+            <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-twitter text-white text-2xl"></i>
+            </a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-instagram text-white text-2xl"></i>
+            </a>
           </div>
         </div>
         <div className="text-center">
