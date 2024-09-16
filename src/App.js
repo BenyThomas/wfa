@@ -1,23 +1,38 @@
-import logo from './logo.svg';
+import React from 'react';
+import Hero from './components/Hero';
+import Navbar from './components/Navbar';
+import Services from './components/Services';
+import Testimonials from './components/Testimonial';
+import Footer from './components/Footer';
+import AboutUs from './components/AboutUs';
+import ContactUs from './components/ContactUs';
+import HearingTest from './components/HearingTest';
+import WhatsAppButton from './components/WhatsAppButton';
+import './index';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navbar/>
+      <Hero />
+      <section id='services'>
+        <Services/>
+      </section>
+      <section id="hearing-test">
+        <HearingTest />
+      </section>
+      <section id='testimonials'>
+        <Testimonials/>
+      </section>
+      <section id="about">
+        <AboutUs />
+      </section>
+      <section id="contact">
+        <ContactUs />
+      </section>
+      <Footer/>
+      <WhatsAppButton/>
     </div>
   );
 }
