@@ -5,8 +5,8 @@ const TestResults = ({ responses }) => {
   const missedFrequencies = responses.filter(response => !response.heard).map(r => r.frequency);
 
   return (
-    <div className="test-results text-center">
-      <h3 className="text-3xl font-bold mb-4">Test Results</h3>
+    <div className="test-results text-center py-8">
+      <h3 className="text-3xl font-rockwell mb-4">Test Results</h3>
 
       {heardFrequencies.length > 0 ? (
         <>
@@ -32,7 +32,7 @@ const TestResults = ({ responses }) => {
         </>
       )}
 
-      <p className="text-lg text-gray-700">For an accurate diagnosis, please visit our hearing center for a full evaluation.</p>
+      <p className="text-lg text-gray-700 font-montserrat">For an accurate diagnosis, please visit our hearing center for a full evaluation.</p>
     </div>
   );
 };
