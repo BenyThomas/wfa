@@ -7,18 +7,18 @@ const Navbar = () => {
         {/* Add the logo image */}
         <a href="#home">
           <img
-            src="/images/logo2.png"
+            src="/images/wfa-logo-final.png"
             alt="WFA Hearing Centre Logo"
             className="w-24 h-auto"  // Adjust the width as needed
           />
         </a>
 
         <ul className="flex space-x-6">
-          <li><a href="#home" className="text-primary hover:text-accent font-montserrat">Home</a></li>
-          <li><a href="#services" className="text-primary hover:text-accent font-montserrat">Services</a></li>
-          <li><a href="#testimonials" className="text-primary hover:text-accent font-montserrat">Testimonials</a></li>
-          <li><a href="#about" className="text-primary hover:text-accent font-montserrat">About Us</a></li>
-          <li><a href="#contact" className="text-primary hover:text-accent font-montserrat">Contact</a></li>
+          <li><a href="#home" className="text-primary hover:text-accent transition duration-300 ease-in-out">Home</a></li>
+          <li><a href="#services" className="text-primary hover:text-accent transition duration-300 ease-in-out">Services</a></li>
+          <li><a href="#testimonials" className="text-primary hover:text-accent transition duration-300 ease-in-out">Testimonials</a></li>
+          <li><a href="#about" className="text-primary hover:text-accent transition duration-300 ease-in-out">About Us</a></li>
+          <li><a href="#contact" className="text-primary hover:text-accent transition duration-300 ease-in-out">Contact</a></li>
         </ul>
       </div>
     </nav>
