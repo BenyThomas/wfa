@@ -5,8 +5,8 @@ const Testimonials = () => {
     <section className="py-16 bg-primary text-white">
       <div className="container mx-auto text-center animate-fadeIn">
         <h2 className="text-4xl font-bold mb-12 ">What Our Customers Say</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 hover-section">
-          <div className="bg-white text-black p-6 rounded-lg shadow-lg">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="bg-white text-black p-6 rounded-lg shadow-lg hover-section">
             <p className="text-xl italic">"The hearing aids have changed my life. I can hear my grandchildren again!"</p>
             <h4 className="mt-4 font-semibold">Banyenzachi M.</h4>
           </div>
