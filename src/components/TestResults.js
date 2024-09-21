@@ -5,7 +5,7 @@ const TestResults = ({ responses }) => {
   const missedFrequencies = responses.filter(response => !response.heard).map(r => r.frequency);
 
   return (
-    <div className="test-results text-center py-8">
+    <div className="test-results text-center py-8 hover-section">
       <h3 className="text-3xl font-rockwell mb-4">Test Results</h3>
 
       {heardFrequencies.length > 0 ? (

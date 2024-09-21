@@ -5,7 +5,7 @@ const Contact = () => {
     <section
   className="relative bg-gradient-to-r from-primary to-accent h-screen flex items-center justify-center"
 >
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 hover-section animate-fadeIn">
     <div className="text-center md:text-left">
     <h4 className="text-lg font-semibold mb-4">Reach Us At</h4>
     <p className="mb-2"><strong>Phone:</strong> +255 755 754 175</p>

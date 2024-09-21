@@ -48,10 +48,9 @@ const HearingTest = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           
           {/* Left Column: Image */}
-          <div className="flex items-center justify-center">
-            {/* Display the corresponding image for each frequency */}
+          <div className="flex items-center justify-center animate-fadeIn">
             {!testStarted && !isComplete ? (
-              <img src="/images/hearing-test.jpeg" alt="Hearing Test" className="w-full max-w-sm rounded-lg shadow-lg" />
+              <img src="/images/hearing-tests.jpeg" alt="Hearing Test" className="w-full max-w-sm rounded-lg shadow-lg" />
             ) : (
               <img
                 src={frequencies[currentFrequency].image}
@@ -62,11 +61,11 @@ const HearingTest = () => {
           </div>
 
           {/* Right Column: Welcome message and test flow */}
-          <div className="flex flex-col justify-center">
+          <div className="flex flex-col justify-center animate-fadeIn">
             {!testStarted && !isComplete && (
               <>
-                <h2 className="text-4xl font-rockwell mb-4">Welcome to Our Online Hearing Test</h2>
-                <p className="text-lg text-gray-700 mb-6 font-montserrat leading-relaxed">
+                <h2 className="text-4xl font-heading mb-4">Welcome to Our Online Hearing Test</h2>
+                <p className="text-lg text-gray-700 mb-6 font-body leading-relaxed">
                   Our advanced hearing test is designed to help you evaluate your hearing in a few easy steps.
                   Click the button below to begin the test and discover how well you can hear different sound frequencies.
                 </p>
@@ -89,7 +88,7 @@ const HearingTest = () => {
                   ></div>
                 </div>
 
-                <p className="text-lg mb-4">Listen to the {frequencies[currentFrequency].freq} Hz sound and tell us if you can hear it.</p>
+                <p className="text-lg mb-4 font-body">Listen to the {frequencies[currentFrequency].freq} Hz sound and tell us if you can hear it.</p>
                 <ToneGenerator frequency={frequencies[currentFrequency].freq} />
                 
                 <div className="mt-8">
@@ -109,7 +108,6 @@ const HearingTest = () => {
               </>
             )}
 
-            {/* Results Section */}
             {isComplete && <TestResults responses={responses} />}
           </div>
         </div>
