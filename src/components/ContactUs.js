@@ -3,7 +3,7 @@ import React from 'react';
 const Contact = () => {
   return (
     <section
-  className="relative bg-gradient-to-r from-primary to-accent h-screen flex items-center justify-center"
+  className="bg-gradient-to-r from-primary to-accent min-h-screen flex items-center justify-center py-16"
 >
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 hover-section animate-fadeIn">
     <div className="text-center md:text-left">
