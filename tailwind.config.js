@@ -11,8 +11,8 @@ module.exports = {
         accent: '#3e7dfc',  // Sky Blue
       },
       fontFamily: {
-        rockwell: ['Lora', 'serif'],
-        montserrat: ['Roboto', 'sans-serif'],
+        heading: ['Playfair Display', 'serif'], // For heading
+        body: ['Roboto', 'sans-serif'], 
       },
     },
   },

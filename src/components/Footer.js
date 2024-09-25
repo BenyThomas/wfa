@@ -8,15 +8,15 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
           {/* Contact Us Section */}
           <div>
-            <h4 className="text-lg font-semibold">Contact Us</h4>
-            <p className="mt-2">+255 755 754 175</p>
+            <h4 className="text-lg font-semibold font-body">Contact Us</h4>
+            <p className="mt-2 font-body">+255 755 754 175</p>
             <p>info@wfahearing.co.tz</p>
           </div>
 
           {/* Social Media Section */}
           <div>
-            <h4 className="text-lg font-semibold">Follow Us</h4>
-            <div className="flex justify-center md:justify-start space-x-4 mt-2">
+            <h4 className="text-lg font-semibold font-body">Follow Us</h4>
+            <div className="flex justify-center md:justify-start space-x-4 mt-2 font-body">
               <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                 <i className="fab fa-facebook text-white text-2xl hover:text-accent transition duration-300"></i>
               </a>
@@ -31,8 +31,8 @@ const Footer = () => {
 
           {/* Visit Us Section */}
           <div>
-            <h4 className="text-lg font-semibold">Visit Us</h4>
-            <p className="mt-2">Chole Plaza 1st Floor, Bakhresa - Masaki, Dar es Salaam</p>
+            <h4 className="text-lg font-semibold font-body">Visit Us</h4>
+            <p className="mt-2 font-body">Chole Plaza 1st Floor, Bakhresa - Masaki, Dar es Salaam</p>
           </div>
         </div>
       </div>

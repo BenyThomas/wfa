@@ -43,7 +43,7 @@ const HearingTest = () => {
   };
 
   return (
-    <div className="hearing-test-container py-16 bg-gray-100 animate-fadeIn">
+    <div className="hearing-test-container py-16 bg-gray-100 animate-fadeIn animate-slide-up duration-[4000ms] ease-out">
         <Helmet>
         <title>Hearing Test | WFA Hearing Centre</title>
         <meta name="description" content="Take our advanced online hearing test to evaluate your hearing in a few easy steps." />
@@ -81,7 +81,7 @@ const HearingTest = () => {
                 </p>
                 <button
                   onClick={startTest}
-                  className="bg-primary hover:bg-accent text-white py-3 px-8 rounded-lg transform transition duration-300 ease-in-out hover:scale-105"
+                  className="bg-primary hover:bg-accent text-white py-3 px-8 rounded-lg transform transition duration-300 ease-in-out hover:scale-105 font-body"
                 >
                   Start Hearing Test
                 </button>
@@ -93,7 +93,7 @@ const HearingTest = () => {
                 {/* Progress Bar */}
                 <div className="relative w-full h-4 bg-gray-200 rounded-lg overflow-hidden mb-8 animate-fadeIn hover-section">
                   <div
-                    className="absolute h-full bg-primary transition-all duration-300"
+                    className="absolute h-full bg-primary transition-all duration-300 font-body"
                     style={{ width: `${((currentFrequency + 1) / frequencies.length) * 100}%` }}
                   ></div>
                 </div>
@@ -106,13 +106,13 @@ const HearingTest = () => {
                     className="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg mr-4 transform transition duration-300 ease-in-out hover:scale-105"
                     onClick={() => handleResponse(true)}
                   >
-                    <i className="fas fa-check"></i> I Can Hear It
+                    <i className="fas fa-check font-body"></i> I Can Hear It
                   </button>
                   <button
                     className="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-lg transform transition duration-300 ease-in-out hover:scale-105"
                     onClick={() => handleResponse(false)}
                   >
-                    <i className="fas fa-times"></i> I Cannot Hear It
+                    <i className="fas fa-times font-body"></i> I Cannot Hear It
                   </button>
                 </div>
               </>

@@ -42,3 +42,19 @@ button:hover {
   transform: scale(1.02);
   background-color: rgba(0, 0, 0, 0.05);
 }
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  animation: slideUp 4s ease-out;
+}
+

@@ -47,7 +47,7 @@ const Navbar = () => {
           <li>
             <a
               href="#home"
-              className="text-primary hover:text-accent font-montserrat"
+              className="text-primary hover:text-accent font-montserrat font-semibold font-body"
             >
               Home
             </a>
@@ -55,7 +55,7 @@ const Navbar = () => {
           <li>
             <a
               href="#services"
-              className="text-primary hover:text-accent font-montserrat"
+              className="text-primary hover:text-accent font-montserrat font-semibold font-body"
             >
               Services
             </a>
@@ -63,7 +63,7 @@ const Navbar = () => {
           <li>
             <a
               href="#testimonials"
-              className="text-primary hover:text-accent font-montserrat"
+              className="text-primary hover:text-accent font-montserrat font-semibold font-body"
             >
               Testimonials
             </a>
@@ -71,7 +71,7 @@ const Navbar = () => {
           <li>
             <a
               href="#about"
-              className="text-primary hover:text-accent font-montserrat"
+              className="text-primary hover:text-accent font-montserrat font-semibold font-body"
             >
               About Us
             </a>
@@ -79,7 +79,7 @@ const Navbar = () => {
           <li>
             <a
               href="#contact"
-              className="text-primary hover:text-accent font-montserrat"
+              className="text-primary hover:text-accent font-montserrat font-semibold font-body"
             >
               Contact
             </a>
@@ -88,11 +88,11 @@ const Navbar = () => {
 
         {/* Mobile Menu (visible when the hamburger icon is clicked) */}
         {isOpen && (
-          <ul className="md:hidden absolute top-full left-0 w-full bg-white shadow-lg py-4 flex flex-col space-y-4 text-center">
+          <ul className="md:hidden absolute top-full left-0 w-full bg-white shadow-lg py-4 flex flex-col space-y-4 text-center font-semibold font-body">
             <li>
               <a
                 href="#home"
-                className="text-primary hover:text-accent font-montserrat"
+                className="text-primary hover:text-accent font-montserrat font-semibold font-body"
                 onClick={toggleMenu}
               >
                 Home
@@ -101,7 +101,7 @@ const Navbar = () => {
             <li>
               <a
                 href="#services"
-                className="text-primary hover:text-accent font-montserrat"
+                className="text-primary hover:text-accent font-montserrat font-semibold font-body"
                 onClick={toggleMenu}
               >
                 Services
@@ -110,7 +110,7 @@ const Navbar = () => {
             <li>
               <a
                 href="#testimonials"
-                className="text-primary hover:text-accent font-montserrat"
+                className="text-primary hover:text-accent font-montserrat font-semibold font-body"
                 onClick={toggleMenu}
               >
                 Testimonials
@@ -119,7 +119,7 @@ const Navbar = () => {
             <li>
               <a
                 href="#about"
-                className="text-primary hover:text-accent font-montserrat"
+                className="text-primary hover:text-accent font-montserrat font-semibold font-body"
                 onClick={toggleMenu}
               >
                 About Us
@@ -128,7 +128,7 @@ const Navbar = () => {
             <li>
               <a
                 href="#contact"
-                className="text-primary hover:text-accent font-montserrat"
+                className="text-primary hover:text-accent font-montserrat font-semibold font-body"
                 onClick={toggleMenu}
               >
                 Contact
