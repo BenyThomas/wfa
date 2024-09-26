@@ -1,10 +1,21 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { FaGlobe } from 'react-icons/fa'; // Import i18next for translation
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false); // Track if mobile menu is open
+  const { i18n, t } = useTranslation(); // Translation hook
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+  };
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+  };
+
+  // Language switcher function
+  const changeLanguage = (language) => {
+    i18n.changeLanguage(language);
   };
 
   return (
@@ -18,6 +29,32 @@ const Navbar = () => {
             className="w-24 h-auto"
           />
         </a>
+
+        {/* Dropdown Language Selector */}
+        <div className="relative">
+          <button
+            onClick={toggleDropdown}
+            className="text-primary hover:text-accent"
+          >
+            <FaGlobe className="text-2xl" /> {/* Language Icon */}
+          </button>
+          {isOpen && (
+            <div className="absolute right-0 mt-2 bg-white shadow-lg rounded-lg">
+              <button
+                onClick={() => changeLanguage('en')}
+                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+              >
+                English
+              </button>
+              <button
+                onClick={() => changeLanguage('sw')}
+                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+              >
+                Swahili
+              </button>
+            </div>
+          )}
+        </div>
 
         {/* Hamburger Icon (visible on mobile) */}
         <div className="md:hidden">
@@ -49,7 +86,7 @@ const Navbar = () => {
               href="#home"
               className="text-primary hover:text-accent font-montserrat font-semibold font-body"
             >
-              Home
+              {t('home')} {/* Translated text for Home */}
             </a>
           </li>
           <li>
@@ -57,7 +94,7 @@ const Navbar = () => {
               href="#services"
               className="text-primary hover:text-accent font-montserrat font-semibold font-body"
             >
-              Services
+              {t('services')} {/* Translated text for Services */}
             </a>
           </li>
           <li>
@@ -65,7 +102,7 @@ const Navbar = () => {
               href="#testimonials"
               className="text-primary hover:text-accent font-montserrat font-semibold font-body"
             >
-              Testimonials
+              {t('testimonials')} {/* Translated text for Testimonials */}
             </a>
           </li>
           <li>
@@ -73,7 +110,7 @@ const Navbar = () => {
               href="#about"
               className="text-primary hover:text-accent font-montserrat font-semibold font-body"
             >
-              About Us
+              {t('about_us')} {/* Translated text for About Us */}
             </a>
           </li>
           <li>
@@ -81,7 +118,7 @@ const Navbar = () => {
               href="#contact"
               className="text-primary hover:text-accent font-montserrat font-semibold font-body"
             >
-              Contact
+              {t('contact')} {/* Translated text for Contact */}
             </a>
           </li>
         </ul>
@@ -95,7 +132,7 @@ const Navbar = () => {
                 className="text-primary hover:text-accent font-montserrat font-semibold font-body"
                 onClick={toggleMenu}
               >
-                Home
+                {t('home')} {/* Translated text for Home */}
               </a>
             </li>
             <li>
@@ -104,7 +141,7 @@ const Navbar = () => {
                 className="text-primary hover:text-accent font-montserrat font-semibold font-body"
                 onClick={toggleMenu}
               >
-                Services
+                {t('services')} {/* Translated text for Services */}
               </a>
             </li>
             <li>
@@ -113,7 +150,7 @@ const Navbar = () => {
                 className="text-primary hover:text-accent font-montserrat font-semibold font-body"
                 onClick={toggleMenu}
               >
-                Testimonials
+                {t('testimonials')} {/* Translated text for Testimonials */}
               </a>
             </li>
             <li>
@@ -122,7 +159,7 @@ const Navbar = () => {
                 className="text-primary hover:text-accent font-montserrat font-semibold font-body"
                 onClick={toggleMenu}
               >
-                About Us
+                {t('about_us')} {/* Translated text for About Us */}
               </a>
             </li>
             <li>
@@ -131,7 +168,7 @@ const Navbar = () => {
                 className="text-primary hover:text-accent font-montserrat font-semibold font-body"
                 onClick={toggleMenu}
               >
-                Contact
+                {t('contact')} {/* Translated text for Contact */}
               </a>
             </li>
           </ul>

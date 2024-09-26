@@ -1,9 +1,13 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
+
 const scrollToHearingTest = () => {
   document.getElementById('hearing-test').scrollIntoView({ behavior: 'smooth' });
 };
 
 const Hero = () => {
+  const { t } = useTranslation(); // Hook for translation
+
   return (
     <section
       id="hero-section"
@@ -26,16 +30,16 @@ const Hero = () => {
       <div className="container mx-auto h-full flex items-center justify-center relative z-10 px-4">
         <div className="text-center text-white">
           <h1 className="text-4xl sm:text-5xl font-heading text-4xl font-bold mb-4 leading-tight">
-            Better Hearing, Better Life
+            {t('hero_title')} {/* Translation key for the title */}
           </h1>
           <p className="font-body text-lg sm:text-xl mb-8 leading-relaxed">
-            Providing innovative hearing solutions to improve your quality of life.
+            {t('hero_subtitle')} {/* Translation key for the subtitle */}
           </p>
           <button
             onClick={scrollToHearingTest}
             className="bg-primary hover:bg-accent text-white py-3 px-8 rounded-lg transform transition duration-300 ease-in-out hover:scale-110 font-body"
           >
-            Discover Our Hearing Aids
+            {t('hero_button')} {/* Translation key for the button */}
           </button>
         </div>
       </div>
