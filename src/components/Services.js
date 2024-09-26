@@ -9,19 +9,19 @@ const Services = () => {
           <p className="font-body text-lg text-gray-600 hover-section font-body">Explore the range of products and services we offer to improve your hearing.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-white shadow-lg rounded-lg p-6 hover-section animate-fadeIn">
+          <div className="bg-white shadow-lg rounded-lg p-6 hover-section animate-fadeIn animate-bounce">
             <img src="/images/hearing-aids3.jpeg" alt="Service 1" className="w-full h-48 object-cover rounded-t-lg" />
             <h3 className="text-2xl font-semibold mt-4 font-body">Hearing Aids</h3>
             <p className="text-gray-600 mt-2 font-body">Explore the latest technology in hearing aids designed for your unique needs.</p>
             <button className="mt-4 text-primary hover:text-accent font-body">Learn More</button>
           </div>
-          <div className="bg-white shadow-lg rounded-lg p-6 hover-section animate-fadeIn">
+          <div className="bg-white shadow-lg rounded-lg p-6 hover-section animate-fadeIn animate-bounce">
             <img src="/images/hearing-tests.jpeg" alt="Service 2" className="w-full h-48 object-cover rounded-t-lg" />
             <h3 className="text-2xl font-semibold mt-4 font-body">Hearing Tests</h3>
             <p className="text-gray-600 mt-2 font-body">Get a professional hearing test to understand your hearing needs.</p>
             <button className="mt-4 text-primary hover:text-accent font-body">Learn More</button>
           </div>
-          <div className="bg-white shadow-lg rounded-lg p-6 hover-section animate-fadeIn" >
+          <div className="bg-white shadow-lg rounded-lg p-6 hover-section animate-fadeIn animate-bounce" >
             <img src="/images/after-services.jpeg" alt="Service 3" className="w-full h-48 object-cover rounded-t-lg" />
             <h3 className="text-2xl font-semibold mt-4 font-body">Aftercare Services</h3>
             <p className="text-gray-600 mt-2 font-body">Keep your hearing aids in top condition with our aftercare services.</p>

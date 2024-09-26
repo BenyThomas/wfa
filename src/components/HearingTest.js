@@ -43,7 +43,7 @@ const HearingTest = () => {
   };
 
   return (
-    <div className="hearing-test-container py-16 bg-gray-100 animate-fadeIn animate-slide-up duration-[4000ms] ease-out">
+    <div className="hearing-test-container py-16 bg-gray-100 animate-fadeIn">
         <Helmet>
         <title>Hearing Test | WFA Hearing Centre</title>
         <meta name="description" content="Take our advanced online hearing test to evaluate your hearing in a few easy steps." />
@@ -58,9 +58,9 @@ const HearingTest = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           
           {/* Left Column: Image */}
-          <div className="flex items-center justify-center animate-fadeIn">
+          <div className="flex items-center justify-center animate-fadeIn ">
             {!testStarted && !isComplete ? (
-              <img src="/images/hearing-tests.jpeg" alt="Take our online hearing test" className="w-full max-w-sm rounded-lg shadow-lg" />
+              <img src="/images/hearing-tests.jpeg" alt="Take our online hearing test" className="w-full max-w-sm rounded-lg shadow-lg hover-section" />
             ) : (
               <img
                 src={frequencies[currentFrequency].image}

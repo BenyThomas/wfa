@@ -8,31 +8,32 @@ import AboutUs from './components/AboutUs';
 import ContactUs from './components/ContactUs';
 import HearingTest from './components/HearingTest';
 import WhatsAppButton from './components/WhatsAppButton';
-import './index';
+import Section from './components/Section';
+import './index.css';
 import './App.css';
 
 function App() {
   return (
     <div>
-      <Navbar/>
+      <Navbar />
       <Hero />
-      <section id='services'>
-        <Services/>
-      </section>
-      <section id="hearing-test">
+      <Section id="services">
+        <Services />
+      </Section>
+      <Section id="hearing-test">
         <HearingTest />
-      </section>
-      <section id='testimonials'>
-        <Testimonials/>
-      </section>
-      <section id="about">
+      </Section>
+      <Section id="testimonials">
+        <Testimonials />
+      </Section>
+      <Section id="about">
         <AboutUs />
-      </section>
-      <section id="contact">
+      </Section>
+      <Section id="contact">
         <ContactUs />
-      </section>
-      <Footer/>
-      <WhatsAppButton/>
+      </Section>
+      <Footer />
+      <WhatsAppButton />
     </div>
   );
 }
