@@ -2,7 +2,7 @@ import React from 'react';
 
 const Services = () => {
   return (
-    <section className="py-16 bg-gray-100 animate-slide-up duration-[5000ms] ease-out">
+    <section className="py-16 bg-gray-100 animate-slide-up duration-1000 ease-out">
       <div className="container mx-auto ">
         <div className="text-center mb-12 ">
           <h2 className="text-4xl font-bold mb-4 hover-section font-heading">Our Hearing Solutions</h2>
