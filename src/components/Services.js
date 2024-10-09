@@ -10,7 +10,7 @@ const Services = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="bg-white shadow-lg rounded-lg p-6 hover-section animate-fadeIn animate-bounce">
-            <img src="/images/hearing-aids-2.jpg" alt="Service 1" className="w-full h-48 object-cover rounded-t-lg" />
+            <img src="/images/hearing-aids-3.jpg" alt="Service 1" className="w-full h-48 object-cover rounded-t-lg" />
             <h3 className="text-2xl font-semibold mt-4 font-body">Hearing Aids</h3>
             <p className="text-gray-600 mt-2 font-body">Explore the latest technology in hearing aids designed for your unique needs.</p>
             <button className="mt-4 text-primary hover:text-accent font-body">Learn More</button>
