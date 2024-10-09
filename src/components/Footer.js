@@ -10,7 +10,9 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold font-body">Contact Us</h4>
             <p className="mt-2 font-body">+255 755 754 175</p>
-            <p>info@wfahearing.co.tz</p>
+            <a href="mailto:wfahearingcenter@gmail.com" className="text-white hover:text-accent">
+  wfahearingcenter@gmail.com
+</a>
           </div>
 
           {/* Social Media Section */}

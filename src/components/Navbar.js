@@ -24,7 +24,7 @@ const Navbar = () => {
         {/* Logo */}
         <a href="#home">
           <img
-            src="/images/wfa-logo-final.png"
+            src="/images/FINAL LOGO/FINAL LOGO/logo.png"
             alt="WFA Hearing Centre Logo"
             className="w-24 h-auto"
           />
