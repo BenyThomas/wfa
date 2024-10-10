@@ -50,7 +50,7 @@ const HearingTest = () => {
         <meta name="keywords" content="hearing test, hearing aids, hearing evaluation" />
         <meta property="og:title" content="Online Hearing Test" />
         <meta property="og:description" content="Evaluate your hearing with our advanced online hearing test." />
-        <meta property="og:image" content="/images/hearing-test-online-2.jpeg" />
+        <meta property="og:image" content="/images/IMG_9165.jpg" />
         <meta property="og:url" content="https://wfahearing.co.tz#hearing-test" />
       </Helmet>
       <div className="container mx-auto px-4 text-center">
@@ -60,7 +60,7 @@ const HearingTest = () => {
           {/* Left Column: Image */}
           <div className="flex items-center justify-center animate-fadeIn ">
             {!testStarted && !isComplete ? (
-              <img src="/images/hearing-test-online.jpg" alt="Take our online hearing test" className="w-full max-w-sm rounded-lg shadow-lg hover-section" />
+              <img src="/images/IMG_9165.JPG" alt="Take our online hearing test" className="w-full max-w-sm rounded-lg shadow-lg hover-section" />
             ) : (
               <img
                 src={frequencies[currentFrequency].image}
