@@ -88,7 +88,7 @@ const HearingTest = () => {
               </>
             )}
 
-            {testStarted && !isComplete && (
+            {testStarted && !isComplete &&we (
               <>
                 {/* Progress Bar */}
                 <div className="relative w-full h-4 bg-gray-200 rounded-lg overflow-hidden mb-8 animate-fadeIn hover-section">
