@@ -11,6 +11,7 @@ import HearingTest from './components/HearingTest';
 import WhatsAppButton from './components/WhatsAppButton';
 import Section from './components/Section';
 import TechnologySection from './components/Technology'
+import Equipment from './components/Equipment'
 import './index.css';
 import './App.css';
 import './i18n'; // Initialize i18n
@@ -38,7 +39,7 @@ function App() {
       <Section id="technology">
       <TechnologySection /> {/* New Section for Starkey Hearing Aids */}
       </Section>
-      
+      <Equipment/>
       <Section id="hearing-test">
         <HearingTest />
       </Section>

@@ -18,7 +18,7 @@ const TechnologySection = () => {
   };
 
   return (
-    <section className="bg-gray-100 py-16">
+    <section className="bg-primary py-16 animate-slide-up duration-1000 ease-out">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-semibold text-center mb-12 font-heading">Technology of Starkey Hearing Aids</h2>
 
