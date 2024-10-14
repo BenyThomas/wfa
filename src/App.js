@@ -10,6 +10,7 @@ import ContactUs from './components/ContactUs';
 import HearingTest from './components/HearingTest';
 import WhatsAppButton from './components/WhatsAppButton';
 import Section from './components/Section';
+import TechnologySection from './components/Technology'
 import './index.css';
 import './App.css';
 import './i18n'; // Initialize i18n
@@ -34,9 +35,11 @@ function App() {
       <Section id='services'>
         <Services />
       </Section>
+      <TechnologySection /> {/* New Section for Starkey Hearing Aids */}
       <Section id="hearing-test">
         <HearingTest />
       </Section>
+
       <Section id='testimonials'>
         <Testimonials />
       </Section>
