@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 const scrollToHearingTest = () => {
-  document.getElementById('hearing-test').scrollIntoView({ behavior: 'smooth' });
+  document.getElementById('technology').scrollIntoView({ behavior: 'smooth' });
 };
 
 const Hero = () => {
