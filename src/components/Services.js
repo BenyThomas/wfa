@@ -31,8 +31,8 @@ const Services = () => {
           <div className="bg-white shadow-lg rounded-lg p-6 hover-section">
             <div className="sliding-images mb-4 relative overflow-hidden w-full h-48">
               <div className={`absolute flex w-[200%] h-full ${startSliding ? 'animate-slide-left' : ''}`}>
-                <img src="/images/IMG_9171.jpg" alt="Service 1" className="w-1/2 h-full object-cover" />
-                <img src="/images/IMG_9175.jpg" alt="Service 1-2" className="w-1/2 h-full object-cover" />
+                <img src="/images/otoscopy.jpg" alt="Service 1" className="w-1/2 h-full object-cover" />
+                <img src="/images/otoscopy.jpg" alt="Service 1-2" className="w-1/2 h-full object-cover" />
               </div>
             </div>
             <h3 className="text-2xl font-semibold mt-4 font-body">Video Otoscopy</h3>
@@ -58,8 +58,8 @@ const Services = () => {
           <div className="bg-white shadow-lg rounded-lg p-6 hover-section">
             <div className="sliding-images mb-4 relative overflow-hidden w-full h-48">
               <div className={`absolute flex w-[200%] h-full ${startSliding ? 'animate-slide-left' : ''}`}>
-                <img src="/images/IMG_9175.jpg" alt="Service 2" className="w-1/2 h-full object-cover" />
-                <img src="/images/IMG_9180.jpg" alt="Service 2-2" className="w-1/2 h-full object-cover" />
+                <img src="/images/IMG_9165.JPG" alt="Service 2" className="w-1/2 h-full object-cover" />
+                <img src="/images/IMG_9165.JPG" alt="Service 2-2" className="w-1/2 h-full object-cover" />
               </div>
             </div>
             <h3 className="text-2xl font-semibold mt-4 font-body">Pure Tone Audiometry</h3>
@@ -112,8 +112,8 @@ const Services = () => {
           <div className="bg-white shadow-lg rounded-lg p-6 hover-section">
             <div className="sliding-images mb-4 relative overflow-hidden w-full h-48">
               <div className={`absolute flex w-[200%] h-full ${startSliding ? 'animate-slide-left' : ''}`}>
-                <img src="/images/IMG_9183.jpg" alt="Service 4" className="w-1/2 h-full object-cover" />
-                <img src="/images/IMG_9184.jpg" alt="Service 4-2" className="w-1/2 h-full object-cover" />
+                <img src="/images/OAE.JPG" alt="Service 4" className="w-1/2 h-full object-cover" />
+                <img src="/images/OAE.jpg" alt="Service 4-2" className="w-1/2 h-full object-cover" />
               </div>
             </div>
             <h3 className="text-2xl font-semibold mt-4 font-body">OAE Testing</h3>
@@ -139,8 +139,8 @@ const Services = () => {
           <div className="bg-white shadow-lg rounded-lg p-6 hover-section">
             <div className="sliding-images mb-4 relative overflow-hidden w-full h-48">
               <div className={`absolute flex w-[200%] h-full ${startSliding ? 'animate-slide-left' : ''}`}>
-                <img src="/images/IMG_9185.jpg" alt="Service 5" className="w-1/2 h-full object-cover" />
-                <img src="/images/IMG_9186.jpg" alt="Service 5-2" className="w-1/2 h-full object-cover" />
+                <img src="/images/IMG_9171.jpg" alt="Service 5" className="w-1/2 h-full object-cover" />
+                <img src="/images/IMG_9171.jpg" alt="Service 5-2" className="w-1/2 h-full object-cover" />
               </div>
             </div>
             <h3 className="text-2xl font-semibold mt-4 font-body">Earwax Removal</h3>
@@ -166,8 +166,9 @@ const Services = () => {
           <div className="bg-white shadow-lg rounded-lg p-6 hover-section">
             <div className="sliding-images mb-4 relative overflow-hidden w-full h-48">
               <div className={`absolute flex w-[200%] h-full ${startSliding ? 'animate-slide-left' : ''}`}>
-                <img src="/images/IMG_9187.jpg" alt="Service 6" className="w-1/2 h-full object-cover" />
-                <img src="/images/IMG_9188.jpg" alt="Service 6-2" className="w-1/2 h-full object-cover" />
+              <img src="/images/SL1.jpg" alt="ABR Testing 1" className="w-1/2 h-full object-cover" />
+                <img src="/images/SL2.jpg" alt="ABR Testing 2" className="w-1/2 h-full object-cover" />
+                <img src="/images/SL3.jpg" alt="ABR Testing 2" className="w-1/2 h-full object-cover" />
               </div>
             </div>
             <h3 className="text-2xl font-semibold mt-4 font-body">Speech and Language Evaluation and Therapy</h3>
@@ -192,8 +193,7 @@ const Services = () => {
           <div className="bg-white shadow-lg rounded-lg p-6 hover-section">
             <div className="sliding-images mb-4 relative overflow-hidden w-full h-48">
               <div className={`absolute flex w-[200%] h-full ${startSliding ? 'animate-slide-left' : ''}`}>
-                <img src="/images/abr-1.jpg" alt="ABR Testing 1" className="w-1/2 h-full object-cover" />
-                <img src="/images/abr-2.jpg" alt="ABR Testing 2" className="w-1/2 h-full object-cover" />
+                <img src="/images/ABR.jpg" alt="ABR Testing 1" className="w-1/2 h-full object-cover" />
               </div>
             </div>
             <h3 className="text-2xl font-semibold mt-4 font-body">Auditory Brainstem Response (ABR) Testing</h3>
@@ -218,8 +218,8 @@ const Services = () => {
           <div className="bg-white shadow-lg rounded-lg p-6 hover-section">
             <div className="sliding-images mb-4 relative overflow-hidden w-full h-48">
               <div className={`absolute flex w-[200%] h-full ${startSliding ? 'animate-slide-left' : ''}`}>
-                <img src="/images/vertigo-1.jpg" alt="Vertigo Assessment 1" className="w-1/2 h-full object-cover" />
-                <img src="/images/vertigo-2.jpg" alt="Vertigo Assessment 2" className="w-1/2 h-full object-cover" />
+                <img src="/images/DZ.jpg" alt="Vertigo Assessment 1" className="w-1/2 h-full object-cover" />
+                <img src="/images/DZ.jpg" alt="Vertigo Assessment 2" className="w-1/2 h-full object-cover" />
               </div>
             </div>
             <h3 className="text-2xl font-semibold mt-4 font-body">Dizziness, Vertigo, and Balance Assessments</h3>
@@ -244,8 +244,9 @@ const Services = () => {
           <div className="bg-white shadow-lg rounded-lg p-6 hover-section">
             <div className="sliding-images mb-4 relative overflow-hidden w-full h-48">
               <div className={`absolute flex w-[200%] h-full ${startSliding ? 'animate-slide-left' : ''}`}>
-                <img src="/images/accessories-1.jpg" alt="Accessories 1" className="w-1/2 h-full object-cover" />
-                <img src="/images/accessories-2.jpg" alt="Accessories 2" className="w-1/2 h-full object-cover" />
+                <img src="/images/AA-1.jpg" alt="Accessories 1" className="w-1/2 h-full object-cover" />
+                <img src="/images/AA-2.jpg" alt="Accessories 2" className="w-1/2 h-full object-cover" />
+                <img src="/images/AA.jpg" alt="Accessories 2" className="w-1/2 h-full object-cover" />
               </div>
             </div>
             <h3 className="text-2xl font-semibold mt-4 font-body">Accessories for Hearing Aids</h3>
