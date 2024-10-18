@@ -85,8 +85,8 @@ const Services = () => {
           <div className="bg-white shadow-lg rounded-lg p-6 hover-section">
             <div className="sliding-images mb-4 relative overflow-hidden w-full h-48">
               <div className={`absolute flex w-[200%] h-full ${startSliding ? 'animate-slide-left' : ''}`}>
-              <img src="/images/IMG_9166.jpg" alt="Service 3" className="w-1/2 h-full object-cover" />
-              <img src="/images/IMG_9171.jpg" alt="Service 3-2" className="w-1/2 h-full object-cover" />
+              <img src="/images/tym.jpg" alt="Service 3" className="w-1/2 h-full object-cover" />
+              <img src="/images/tym.jpg" alt="Service 3-2" className="w-1/2 h-full object-cover" />
               </div>
             </div>
             <h3 className="text-2xl font-semibold mt-4 font-body">Tympanometry</h3>
@@ -218,7 +218,7 @@ const Services = () => {
           <div className="bg-white shadow-lg rounded-lg p-6 hover-section">
             <div className="sliding-images mb-4 relative overflow-hidden w-full h-48">
               <div className={`absolute flex w-[200%] h-full ${startSliding ? 'animate-slide-left' : ''}`}>
-                <img src="/images/DZ.jpg" alt="Vertigo Assessment 1" className="w-1/2 h-full object-cover" />
+                <img src="/images/DZ-1.jpg" alt="Vertigo Assessment 1" className="w-1/2 h-full object-cover" />
                 <img src="/images/DZ.jpg" alt="Vertigo Assessment 2" className="w-1/2 h-full object-cover" />
               </div>
             </div>
