@@ -247,6 +247,7 @@ const Services = () => {
                 <img src="/images/AA-1.jpg" alt="Accessories 1" className="w-1/2 h-full object-cover" />
                 <img src="/images/AA-2.jpg" alt="Accessories 2" className="w-1/2 h-full object-cover" />
                 <img src="/images/AA.jpg" alt="Accessories 2" className="w-1/2 h-full object-cover" />
+                <img src="/images/btr.jpg" alt="Accessories 2" className="w-1/2 h-full object-cover" />
               </div>
             </div>
             <h3 className="text-2xl font-semibold mt-4 font-body">Accessories for Hearing Aids</h3>
