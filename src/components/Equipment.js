@@ -27,7 +27,7 @@ const EquipmentSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Pure Tone Audiometers */}
-          <div className="bg-white shadow-lg rounded-lg p-6 hover-section">
+          <div className="bg-white shadow-lg rounded-lg p-6 hover-section animate-zoom-in">
             <div className="sliding-images mb-4 relative overflow-hidden w-full h-48">
               <div className={`absolute flex w-[200%] h-full ${startSliding ? 'animate-slide-left' : ''}`}>
                 <img src="/images/pta.jpg" alt="Pure Tone Audiometers" className="w-1/2 h-full object-cover" />
@@ -53,7 +53,7 @@ const EquipmentSection = () => {
           </div>
 
           {/* Tympanometers */}
-          <div className="bg-white shadow-lg rounded-lg p-6 hover-section">
+          <div className="bg-white shadow-lg rounded-lg p-6 hover-section animate-zoom-in">
             <div className="sliding-images mb-4 relative overflow-hidden w-full h-48">
               <div className={`absolute flex w-[200%] h-full ${startSliding ? 'animate-slide-left' : ''}`}>
                 <img src="/images/tympo-1.jpg" alt="Tympanometers" className="w-1/2 h-full object-cover" />
@@ -79,7 +79,7 @@ const EquipmentSection = () => {
           </div>
 
           {/* Real Ear Measurement (REM) Systems */}
-          <div className="bg-white shadow-lg rounded-lg p-6 hover-section">
+          <div className="bg-white shadow-lg rounded-lg p-6 hover-section animate-zoom-in">
             <div className="sliding-images mb-4 relative overflow-hidden w-full h-48">
               <div className={`absolute flex w-[200%] h-full ${startSliding ? 'animate-slide-left' : ''}`}>
                 <img src="/images/rem.jpg" alt="Real Ear Measurement (REM) Systems" className="w-1/2 h-full object-cover" />
@@ -105,7 +105,7 @@ const EquipmentSection = () => {
           </div>
 
           {/* Otoacoustic Emission (OAE) Equipment */}
-          <div className="bg-white shadow-lg rounded-lg p-6 hover-section">
+          <div className="bg-white shadow-lg rounded-lg p-6 hover-section animate-zoom-in">
             <div className="sliding-images mb-4 relative overflow-hidden w-full h-48">
               <div className={`absolute flex w-[200%] h-full ${startSliding ? 'animate-slide-left' : ''}`}>
                 <img src="/images/oem.jpg" alt="Otoacoustic Emission (OAE) Equipment" className="w-1/2 h-full object-cover" />
@@ -131,7 +131,7 @@ const EquipmentSection = () => {
           </div>
 
           {/* Auditory Brainstem Response (ABR) Systems */}
-          <div className="bg-white shadow-lg rounded-lg p-6 hover-section">
+          <div className="bg-white shadow-lg rounded-lg p-6 hover-section animate-zoom-in">
             <div className="sliding-images mb-4 relative overflow-hidden w-full h-48">
               <div className={`absolute flex w-[200%] h-full ${startSliding ? 'animate-slide-left' : ''}`}>
                 <img src="/images/abrm.jpeg" alt="Auditory Brainstem Response (ABR) Systems" className="w-1/2 h-full object-cover" />
@@ -157,7 +157,7 @@ const EquipmentSection = () => {
           </div>
 
           {/* Soundproof Booths */}
-          <div className="bg-white shadow-lg rounded-lg p-6 hover-section">
+          <div className="bg-white shadow-lg rounded-lg p-6 hover-section animate-zoom-in">
             <div className="sliding-images mb-4 relative overflow-hidden w-full h-48">
               <div className={`absolute flex w-[200%] h-full ${startSliding ? 'animate-slide-left' : ''}`}>
                 <img src="/images/booth.jpg" alt="Soundproof Booths" className="w-1/2 h-full object-cover" />
@@ -183,7 +183,7 @@ const EquipmentSection = () => {
           </div>
 
           {/* Calibration Services */}
-          <div className="bg-white shadow-lg rounded-lg p-6 hover-section">
+          <div className="bg-white shadow-lg rounded-lg p-6 hover-section animate-zoom-in">
             <div className="sliding-images mb-4 relative overflow-hidden w-full h-48">
               <div className={`absolute flex w-[200%] h-full ${startSliding ? 'animate-slide-left' : ''}`}>
                 <img src="/images/Calb-1.jpg" alt="Calibration Services" className="w-1/2 h-full object-cover" />

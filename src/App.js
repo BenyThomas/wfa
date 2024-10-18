@@ -39,7 +39,10 @@ function App() {
       <Section id="technology">
       <TechnologySection /> {/* New Section for Starkey Hearing Aids */}
       </Section>
+      <Section id='equipment'>
       <Equipment/>
+      </Section>
+      
       <Section id="hearing-test">
         <HearingTest />
       </Section>

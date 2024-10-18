@@ -3,19 +3,29 @@ import { useTranslation } from 'react-i18next';
 import { FaGlobe } from 'react-icons/fa'; // Import i18next for translation
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false); // Track if mobile menu is open
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // Track if mobile menu is open
+  const [isAboutDropdownOpen, setIsAboutDropdownOpen] = useState(false); // Track if About Us dropdown is open
+  const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false); // Track if Language dropdown is open
   const { i18n, t } = useTranslation(); // Translation hook
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
+    setIsMenuOpen(!isMenuOpen);
   };
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen);
+
+  const toggleAboutDropdown = () => {
+    setIsAboutDropdownOpen(!isAboutDropdownOpen);
+    setIsLanguageDropdownOpen(false); // Close the language dropdown if About dropdown is opened
+  };
+
+  const toggleLanguageDropdown = () => {
+    setIsLanguageDropdownOpen(!isLanguageDropdownOpen);
+    setIsAboutDropdownOpen(false); // Close the About Us dropdown if Language dropdown is opened
   };
 
   // Language switcher function
   const changeLanguage = (language) => {
     i18n.changeLanguage(language);
+    setIsLanguageDropdownOpen(false); // Close the language dropdown after selection
   };
 
   return (
@@ -33,22 +43,22 @@ const Navbar = () => {
         {/* Dropdown Language Selector */}
         <div className="relative">
           <button
-            onClick={toggleDropdown}
+            onClick={toggleLanguageDropdown}
             className="text-primary hover:text-accent"
           >
             <FaGlobe className="text-2xl" /> {/* Language Icon */}
           </button>
-          {isOpen && (
-            <div className="absolute right-0 mt-2 bg-white shadow-lg rounded-lg">
+          {isLanguageDropdownOpen && (
+            <div className="absolute right-0 mt-2 bg-white shadow-lg rounded-lg ">
               <button
                 onClick={() => changeLanguage('en')}
-                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-primary hover:text-accent font-montserrat"
               >
                 English
               </button>
               <button
                 onClick={() => changeLanguage('sw')}
-                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-primary hover:text-accent font-montserrat"
               >
                 Swahili
               </button>
@@ -97,22 +107,56 @@ const Navbar = () => {
               {t('services')} {/* Translated text for Services */}
             </a>
           </li>
+
+          {/* Equipment Link */}
           <li>
             <a
-              href="#testimonials"
+              href="#equipment"
               className="text-primary hover:text-accent font-montserrat font-semibold font-body"
             >
-              {t('testimonials')} {/* Translated text for Testimonials */}
+              {t('equipment')} {/* Translated text for Equipment */}
             </a>
           </li>
-          <li>
-            <a
-              href="#about"
+
+          {/* Dropdown for About Us and Testimonials */}
+          <li className="relative">
+            <button
+              onClick={toggleAboutDropdown}
               className="text-primary hover:text-accent font-montserrat font-semibold font-body"
             >
               {t('about_us')} {/* Translated text for About Us */}
-            </a>
+            </button>
+            {isAboutDropdownOpen && (
+              <ul className="absolute left-0 mt-2 bg-white shadow-lg rounded-lg">
+                <li>
+                  <a
+                    href="#about"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-primary hover:text-accent font-montserrat"
+                  >
+                    {t('about_us')}
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#technology"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-primary hover:text-accent font-montserrat"
+                  >
+                    {t('technology')}
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#testimonials"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-primary hover:text-accent font-montserrat"
+                  >
+                    {t('testimonials')}
+                  </a>
+                </li>
+                
+              </ul>
+            )}
           </li>
+
           <li>
             <a
               href="#contact"
@@ -124,7 +168,7 @@ const Navbar = () => {
         </ul>
 
         {/* Mobile Menu (visible when the hamburger icon is clicked) */}
-        {isOpen && (
+        {isMenuOpen && (
           <ul className="md:hidden absolute top-full left-0 w-full bg-white shadow-lg py-4 flex flex-col space-y-4 text-center font-semibold font-body">
             <li>
               <a
@@ -146,21 +190,44 @@ const Navbar = () => {
             </li>
             <li>
               <a
-                href="#testimonials"
+                href="#equipment"
                 className="text-primary hover:text-accent font-montserrat font-semibold font-body"
                 onClick={toggleMenu}
               >
-                {t('testimonials')} {/* Translated text for Testimonials */}
+                {t('equipment')} {/* Translated text for Equipment */}
               </a>
             </li>
+
+            {/* Mobile Dropdown for About Us */}
             <li>
-              <a
-                href="#about"
+              <button
                 className="text-primary hover:text-accent font-montserrat font-semibold font-body"
-                onClick={toggleMenu}
+                onClick={toggleAboutDropdown}
               >
                 {t('about_us')} {/* Translated text for About Us */}
-              </a>
+              </button>
+              {isAboutDropdownOpen && (
+                <ul className="bg-white shadow-lg">
+                  <li>
+                    <a
+                      href="#about"
+                      className="text-primary hover:text-accent font-montserrat font-semibold font-body"
+                      onClick={toggleMenu}
+                    >
+                      {t('about_us')}
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#testimonials"
+                      className="text-primary hover:text-accent font-montserrat font-semibold font-body"
+                      onClick={toggleMenu}
+                    >
+                      {t('testimonials')}
+                    </a>
+                  </li>
+                </ul>
+              )}
             </li>
             <li>
               <a

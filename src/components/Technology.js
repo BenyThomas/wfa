@@ -25,7 +25,7 @@ const TechnologySection = () => {
         {/* Grid layout for the three Starkey products */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Starkey Genesis */}
-          <div className="bg-white p-6 rounded-lg shadow-lg hover-section">
+          <div className="bg-white p-6 rounded-lg shadow-lg hover-section animate-zoom-in">
             <div className="sliding-images mb-4 relative overflow-hidden w-full h-64">
               <div
                 className={`absolute flex w-[200%] h-full ${
@@ -55,7 +55,7 @@ const TechnologySection = () => {
           </div>
 
           {/* Starkey Evolv AI */}
-          <div className="bg-white p-6 rounded-lg shadow-lg hover-section">
+          <div className="bg-white p-6 rounded-lg shadow-lg hover-section animate-zoom-in">
             <div className="sliding-images mb-4 relative overflow-hidden w-full h-64">
               <div
                 className={`absolute flex w-[200%] h-full ${
@@ -85,7 +85,7 @@ const TechnologySection = () => {
           </div>
 
           {/* Starkey Signature */}
-          <div className="bg-white p-6 rounded-lg shadow-lg hover-section">
+          <div className="bg-white p-6 rounded-lg shadow-lg hover-section animate-zoom-in">
             <div className="sliding-images mb-4 relative overflow-hidden w-full h-64">
               <div
                 className={`absolute flex w-[200%] h-full ${

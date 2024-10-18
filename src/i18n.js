@@ -14,6 +14,7 @@ const resources = {
       "about_us": "About Us",
       "contact": "Contact",
       "language": "Language",
+      "equipment": "Products"
       // Add more key-value pairs for translations
     }
   },
@@ -28,6 +29,7 @@ const resources = {
       "about_us": "Kuhusu Sisi",
       "contact": "Wasiliana Nasi",
       "language": "Lugha",
+      "equipment": "Bidha"
       // Add more key-value pairs for translations
     }
   }
