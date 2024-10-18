@@ -56,8 +56,8 @@ const EquipmentSection = () => {
           <div className="bg-white shadow-lg rounded-lg p-6 hover-section">
             <div className="sliding-images mb-4 relative overflow-hidden w-full h-48">
               <div className={`absolute flex w-[200%] h-full ${startSliding ? 'animate-slide-left' : ''}`}>
-                <img src="/images/tym-m-1.jpg" alt="Tympanometers" className="w-1/2 h-full object-cover" />
-                <img src="/images/tym-m.jpg" alt="Tympanometers 2" className="w-1/2 h-full object-cover" />
+                <img src="/images/tympo-1.jpg" alt="Tympanometers" className="w-1/2 h-full object-cover" />
+                <img src="/images/tympo.jpg" alt="Tympanometers 2" className="w-1/2 h-full object-cover" />
               </div>
             </div>
             <h3 className="text-2xl font-semibold mt-4 font-body">Tympanometers</h3>
