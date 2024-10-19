@@ -197,6 +197,7 @@ const Services = () => {
             <div className="sliding-images mb-4 relative overflow-hidden w-full h-48">
               <div className={`absolute flex w-[200%] h-full ${startSliding ? 'animate-slide-left' : ''}`}>
                 <img src="/images/ABR.jpg" alt="ABR Testing 1" className="w-1/2 h-full object-cover" />
+                <img src="/images/ABR.jpg" alt="ABR Testing 1" className="w-1/2 h-full object-cover" />
               </div>
             </div>
             <h3 className="text-2xl font-semibold mt-4 font-body">Auditory Brainstem Response (ABR) Testing</h3>
