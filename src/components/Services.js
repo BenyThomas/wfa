@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Services = () => {
   const [startSliding, setStartSliding] = useState(false);
@@ -6,6 +8,7 @@ const Services = () => {
 
   // Delay the sliding animation to start after 10 seconds
   useEffect(() => {
+    AOS.init({duration: 1000,delay: 100,once: true,}); 
     const timer = setTimeout(() => {
       setStartSliding(true);
     }, 10000); // Start sliding after 10 seconds
@@ -28,7 +31,7 @@ const Services = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
           {/* Video Otoscopy */}
-          <div className="bg-white shadow-lg rounded-lg p-6 hover-section animate-zoom-in">
+          <div className="bg-white shadow-lg rounded-lg p-6 hover-section" data-aos="zoom-in" data-aos-delay="100">
             <div className="sliding-images mb-4 relative overflow-hidden w-full h-48">
               <div className={`absolute flex w-[200%] h-full ${startSliding ? 'animate-slide-left' : ''}`}>
                 <img src="/images/otoscopy.jpg" alt="Service 1" className="w-1/2 h-full object-cover" />
@@ -55,7 +58,7 @@ const Services = () => {
           </div>
 
           {/* Pure Tone Audiometry */}
-          <div className="bg-white shadow-lg rounded-lg p-6 hover-section animate-zoom-in">
+          <div className="bg-white shadow-lg rounded-lg p-6 hover-section" data-aos="zoom-in" data-aos-delay="100">
             <div className="sliding-images mb-4 relative overflow-hidden w-full h-48">
               <div className={`absolute flex w-[200%] h-full ${startSliding ? 'animate-slide-left' : ''}`}>
                 <img src="/images/IMG_9165.JPG" alt="Service 2" className="w-1/2 h-full object-cover" />
@@ -82,7 +85,7 @@ const Services = () => {
           </div>
 
           {/* Tympanometry */}
-          <div className="bg-white shadow-lg rounded-lg p-6 hover-section animate-zoom-in">
+          <div className="bg-white shadow-lg rounded-lg p-6 hover-section" data-aos="zoom-in" data-aos-delay="100">
             <div className="sliding-images mb-4 relative overflow-hidden w-full h-48">
               <div className={`absolute flex w-[200%] h-full ${startSliding ? 'animate-slide-left' : ''}`}>
               <img src="/images/tym.jpg" alt="Service 3" className="w-1/2 h-full object-cover" />
@@ -109,7 +112,7 @@ const Services = () => {
           </div>
 
           {/* OAE Testing */}
-          <div className="bg-white shadow-lg rounded-lg p-6 hover-section animate-zoom-in">
+          <div className="bg-white shadow-lg rounded-lg p-6 hover-section" data-aos="zoom-in" data-aos-delay="100">
             <div className="sliding-images mb-4 relative overflow-hidden w-full h-48">
               <div className={`absolute flex w-[200%] h-full ${startSliding ? 'animate-slide-left' : ''}`}>
                 <img src="/images/OAE.JPG" alt="Service 4" className="w-1/2 h-full object-cover" />
@@ -136,7 +139,7 @@ const Services = () => {
           </div>
 
           {/* Earwax Removal */}
-          <div className="bg-white shadow-lg rounded-lg p-6 hover-section animate-zoom-in">
+          <div className="bg-white shadow-lg rounded-lg p-6 hover-section" data-aos="zoom-in" data-aos-delay="100">
             <div className="sliding-images mb-4 relative overflow-hidden w-full h-48">
               <div className={`absolute flex w-[200%] h-full ${startSliding ? 'animate-slide-left' : ''}`}>
                 <img src="/images/IMG_9171.jpg" alt="Service 5" className="w-1/2 h-full object-cover" />
@@ -163,7 +166,7 @@ const Services = () => {
           </div>
 
           {/* Speech and Language Evaluation and Therapy */}
-          <div className="bg-white shadow-lg rounded-lg p-6 hover-section animate-zoom-in">
+          <div className="bg-white shadow-lg rounded-lg p-6 hover-section" data-aos="zoom-in" data-aos-delay="100">
             <div className="sliding-images mb-4 relative overflow-hidden w-full h-48">
               <div className={`absolute flex w-[200%] h-full ${startSliding ? 'animate-slide-left' : ''}`}>
               <img src="/images/SL1.jpg" alt="ABR Testing 1" className="w-1/2 h-full object-cover" />
@@ -190,7 +193,7 @@ const Services = () => {
             </button>
           </div>
           {/* Auditory Brainstem Response (ABR) Testing */}
-          <div className="bg-white shadow-lg rounded-lg p-6 hover-section animate-zoom-in">
+          <div className="bg-white shadow-lg rounded-lg p-6 hover-section" data-aos="zoom-in" data-aos-delay="100">
             <div className="sliding-images mb-4 relative overflow-hidden w-full h-48">
               <div className={`absolute flex w-[200%] h-full ${startSliding ? 'animate-slide-left' : ''}`}>
                 <img src="/images/ABR.jpg" alt="ABR Testing 1" className="w-1/2 h-full object-cover" />
@@ -215,7 +218,7 @@ const Services = () => {
             </button>
           </div>
           {/* Dizziness, Vertigo, and Balance Assessments */}
-          <div className="bg-white shadow-lg rounded-lg p-6 hover-section animate-zoom-in">
+          <div className="bg-white shadow-lg rounded-lg p-6 hover-section" data-aos="zoom-in" data-aos-delay="100">
             <div className="sliding-images mb-4 relative overflow-hidden w-full h-48">
               <div className={`absolute flex w-[200%] h-full ${startSliding ? 'animate-slide-left' : ''}`}>
                 <img src="/images/DZ-1.jpg" alt="Vertigo Assessment 1" className="w-1/2 h-full object-cover" />
@@ -241,7 +244,7 @@ const Services = () => {
             </button>
           </div>
           {/* Accessories for Hearing Aids */}
-          <div className="bg-white shadow-lg rounded-lg p-6 hover-section animate-zoom-in">
+          <div className="bg-white shadow-lg rounded-lg p-6 hover-section" data-aos="zoom-in" data-aos-delay="100">
             <div className="sliding-images mb-4 relative overflow-hidden w-full h-48">
               <div className={`absolute flex w-[200%] h-full ${startSliding ? 'animate-slide-left' : ''}`}>
                 <img src="/images/AA-1.jpg" alt="Accessories 1" className="w-1/2 h-full object-cover" />
@@ -270,7 +273,7 @@ const Services = () => {
             </button>
           </div>
           {/* Hearing Aid Fitting & Programming */}
-<div className="bg-white shadow-lg rounded-lg p-6 hover-section">
+<div className="bg-white shadow-lg rounded-lg p-6 hover-section" data-aos="zoom-in" data-aos-delay="100">
   <div className="sliding-images mb-4 relative overflow-hidden w-full h-48">
     <div className={`absolute flex w-[200%] h-full ${startSliding ? 'animate-slide-left' : ''}`}>
       <img src="/images/fiting.jpg" alt="Hearing Aid Fitting 1" className="w-1/2 h-full object-cover" />

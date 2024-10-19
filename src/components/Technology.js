@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const TechnologySection = () => {
   const [startSliding, setStartSliding] = useState(false); // State to control when to start sliding
@@ -6,10 +8,12 @@ const TechnologySection = () => {
 
   // Start the sliding animation 10 seconds after the page loads
   useEffect(() => {
+    AOS.init({duration: 1000,delay: 100,once: true,}); 
     const timer = setTimeout(() => {
       setStartSliding(true);
     }, 10000); // Start sliding after 10 seconds
-    return () => clearTimeout(timer); // Cleanup timer on unmount
+    return () => clearTimeout(timer);
+    
   }, []);
 
   // Toggle the visibility of more details when "Learn More" is clicked
@@ -25,7 +29,7 @@ const TechnologySection = () => {
         {/* Grid layout for the three Starkey products */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Starkey Genesis */}
-          <div className="bg-white p-6 rounded-lg shadow-lg hover-section animate-zoom-in">
+          <div className="bg-white p-6 rounded-lg shadow-lg hover-section"  data-aos="zoom-in" data-aos-delay="100">
             <div className="sliding-images mb-4 relative overflow-hidden w-full h-64">
               <div
                 className={`absolute flex w-[200%] h-full ${
@@ -55,7 +59,7 @@ const TechnologySection = () => {
           </div>
 
           {/* Starkey Evolv AI */}
-          <div className="bg-white p-6 rounded-lg shadow-lg hover-section animate-zoom-in">
+          <div className="bg-white p-6 rounded-lg shadow-lg hover-section"  data-aos="zoom-in" data-aos-delay="100">
             <div className="sliding-images mb-4 relative overflow-hidden w-full h-64">
               <div
                 className={`absolute flex w-[200%] h-full ${
@@ -85,7 +89,7 @@ const TechnologySection = () => {
           </div>
 
           {/* Starkey Signature */}
-          <div className="bg-white p-6 rounded-lg shadow-lg hover-section animate-zoom-in">
+          <div className="bg-white p-6 rounded-lg shadow-lg hover-section"  data-aos="zoom-in" data-aos-delay="100">
             <div className="sliding-images mb-4 relative overflow-hidden w-full h-64">
               <div
                 className={`absolute flex w-[200%] h-full ${
