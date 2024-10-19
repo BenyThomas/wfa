@@ -29,7 +29,7 @@ const Hero = () => {
       {/* Content */}
       <div className="container mx-auto h-full flex items-center justify-center relative z-10 px-4">
         <div className="text-center text-white">
-          <h1 className="text-4xl sm:text-5xl font-heading text-4xl font-bold mb-4 leading-tight">
+          <h1 className="text-5xl sm:text-7xl font-heading text-4xl font-bold mb-4 leading-tight">
             {t('hero_title')} {/* Translation key for the title */}
           </h1>
           <p className="font-body text-lg sm:text-xl mb-8 leading-relaxed">
