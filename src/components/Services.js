@@ -248,7 +248,7 @@ const Services = () => {
           <div className="bg-white shadow-lg rounded-lg p-6 hover-section" data-aos="zoom-in" data-aos-delay="100">
             <div className="sliding-images mb-4 relative overflow-hidden w-full h-48">
               <div className={`absolute flex w-[200%] h-full ${startSliding ? 'animate-slide-left' : ''}`}>
-                <img src="/images/AA-1.jpg" alt="Accessories 1" className="w-1/2 h-full object-cover" />
+                {/* <img src="/images/AA-1.jpg" alt="Accessories 1" className="w-1/2 h-full object-cover" /> */}
                 <img src="/images/AA-2.jpg" alt="Accessories 2" className="w-1/2 h-full object-cover" />
                 <img src="/images/AA.jpg" alt="Accessories 2" className="w-1/2 h-full object-cover" />
                 <img src="/images/btr.jpg" alt="Accessories 2" className="w-1/2 h-full object-cover" />

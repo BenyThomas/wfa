@@ -219,6 +219,15 @@ const Navbar = () => {
                   </li>
                   <li>
                     <a
+                      href="#technology"
+                      className="text-primary hover:text-accent font-montserrat font-semibold font-body"
+                      onClick={toggleMenu}
+                    >
+                      {t('Technology')}
+                    </a>
+                  </li>
+                  <li>
+                    <a
                       href="#testimonials"
                       className="text-primary hover:text-accent font-montserrat font-semibold font-body"
                       onClick={toggleMenu}

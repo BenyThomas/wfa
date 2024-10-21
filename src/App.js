@@ -32,7 +32,9 @@ function App() {
         <button onClick={() => changeLanguage('en')}>English</button>
         <button onClick={() => changeLanguage('sw')}>Swahili</button>
       </div>
+      <Section id='home'>
       <Hero />
+      </Section>
       <Section id='services'>
         <Services />
       </Section>
