@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { FaGlobe } from 'react-icons/fa'; // Import i18next for translation
 
@@ -8,8 +8,14 @@ const Navbar = () => {
   const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false); // Track if Language dropdown is open
   const { i18n, t } = useTranslation(); // Translation hook
 
+  // References for detecting clicks outside dropdowns
+  const aboutDropdownRef = useRef(null);
+  const languageDropdownRef = useRef(null);
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+    setIsAboutDropdownOpen(false); // Close dropdowns when menu is toggled
+    setIsLanguageDropdownOpen(false);
   };
 
   const toggleAboutDropdown = () => {
@@ -20,6 +26,7 @@ const Navbar = () => {
   const toggleLanguageDropdown = () => {
     setIsLanguageDropdownOpen(!isLanguageDropdownOpen);
     setIsAboutDropdownOpen(false); // Close the About Us dropdown if Language dropdown is opened
+    setIsMenuOpen(false); // Close the mobile menu when language dropdown is opened
   };
 
   // Language switcher function
@@ -27,6 +34,29 @@ const Navbar = () => {
     i18n.changeLanguage(language);
     setIsLanguageDropdownOpen(false); // Close the language dropdown after selection
   };
+
+  // Close dropdowns when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        aboutDropdownRef.current &&
+        !aboutDropdownRef.current.contains(event.target) &&
+        languageDropdownRef.current &&
+        !languageDropdownRef.current.contains(event.target)
+      ) {
+        setIsAboutDropdownOpen(false);
+        setIsLanguageDropdownOpen(false);
+      }
+    };
+
+    // Add event listener for clicks
+    document.addEventListener('mousedown', handleClickOutside);
+
+    return () => {
+      // Cleanup event listener
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
   return (
     <nav className="bg-white shadow-md p-4 fixed w-full top-0 z-50">
@@ -39,32 +69,6 @@ const Navbar = () => {
             className="w-24 h-auto"
           />
         </a>
-
-        {/* Dropdown Language Selector */}
-        <div className="relative">
-          <button
-            onClick={toggleLanguageDropdown}
-            className="text-primary hover:text-accent"
-          >
-            <FaGlobe className="text-2xl" /> {/* Language Icon */}
-          </button>
-          {isLanguageDropdownOpen && (
-            <div className="absolute right-0 mt-2 bg-white shadow-lg rounded-lg ">
-              <button
-                onClick={() => changeLanguage('en')}
-                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-primary hover:text-accent font-montserrat"
-              >
-                English
-              </button>
-              <button
-                onClick={() => changeLanguage('sw')}
-                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-primary hover:text-accent font-montserrat"
-              >
-                Swahili
-              </button>
-            </div>
-          )}
-        </div>
 
         {/* Hamburger Icon (visible on mobile) */}
         <div className="md:hidden">
@@ -79,12 +83,21 @@ const Navbar = () => {
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h16m-7 6h7"
-              ></path>
+              {isMenuOpen ? (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M6 18L18 6M6 6l12 12"
+                ></path>
+              ) : (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                ></path>
+              )}
             </svg>
           </button>
         </div>
@@ -119,7 +132,7 @@ const Navbar = () => {
           </li>
 
           {/* Dropdown for About Us and Testimonials */}
-          <li className="relative">
+          <li className="relative" ref={aboutDropdownRef}>
             <button
               onClick={toggleAboutDropdown}
               className="text-primary hover:text-accent font-montserrat font-semibold font-body"
@@ -131,7 +144,7 @@ const Navbar = () => {
                 <li>
                   <a
                     href="#about"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-primary hover:text-accent font-montserrat"
+                    className="block px-4 py-2 text-primary hover:text-accent font-montserrat"
                   >
                     {t('about_us')}
                   </a>
@@ -139,7 +152,7 @@ const Navbar = () => {
                 <li>
                   <a
                     href="#technology"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-primary hover:text-accent font-montserrat"
+                    className="block px-4 py-2 text-primary hover:text-accent font-montserrat"
                   >
                     {t('technology')}
                   </a>
@@ -147,12 +160,11 @@ const Navbar = () => {
                 <li>
                   <a
                     href="#testimonials"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-primary hover:text-accent font-montserrat"
+                    className="block px-4 py-2 text-primary hover:text-accent font-montserrat"
                   >
                     {t('testimonials')}
                   </a>
                 </li>
-                
               </ul>
             )}
           </li>
@@ -165,11 +177,37 @@ const Navbar = () => {
               {t('contact')} {/* Translated text for Contact */}
             </a>
           </li>
+
+          {/* Language Selector (Desktop only) */}
+          <li className="relative" ref={languageDropdownRef}>
+            <button
+              onClick={toggleLanguageDropdown}
+              className="text-primary hover:text-accent font-montserrat font-semibold font-body"
+            >
+              <FaGlobe className="inline-block mr-1" /> {/* Language Icon */}
+            </button>
+            {isLanguageDropdownOpen && (
+              <div className="absolute right-0 mt-2 bg-white shadow-lg rounded-lg z-50">
+                <button
+                  onClick={() => changeLanguage('en')}
+                  className="block px-4 py-2 text-primary hover:text-accent font-montserrat"
+                >
+                  English
+                </button>
+                <button
+                  onClick={() => changeLanguage('sw')}
+                  className="block px-4 py-2 text-primary hover:text-accent font-montserrat"
+                >
+                  Swahili
+                </button>
+              </div>
+            )}
+          </li>
         </ul>
 
         {/* Mobile Menu (visible when the hamburger icon is clicked) */}
         {isMenuOpen && (
-          <ul className="md:hidden absolute top-full left-0 w-full bg-white shadow-lg py-4 flex flex-col space-y-4 text-center font-semibold font-body">
+          <ul className="md:hidden absolute top-full left-0 w-full bg-white shadow-lg py-4 flex flex-col space-y-4 text-center font-semibold font-body z-40">
             <li>
               <a
                 href="#home"
@@ -223,7 +261,7 @@ const Navbar = () => {
                       className="text-primary hover:text-accent font-montserrat font-semibold font-body"
                       onClick={toggleMenu}
                     >
-                      {t('Technology')}
+                      {t('technology')}
                     </a>
                   </li>
                   <li>
@@ -246,6 +284,43 @@ const Navbar = () => {
               >
                 {t('contact')} {/* Translated text for Contact */}
               </a>
+            </li>
+
+            {/* Language Selector in Mobile Menu */}
+            <li>
+              <button
+                onClick={toggleLanguageDropdown}
+                className="text-primary hover:text-accent font-montserrat font-semibold font-body flex items-center justify-center"
+              >
+                <FaGlobe className="inline-block mr-1" /> {/* Language Icon */}
+                {t('language')}
+              </button>
+              {isLanguageDropdownOpen && (
+                <ul className="bg-white shadow-lg">
+                  <li>
+                    <button
+                      onClick={() => {
+                        changeLanguage('en');
+                        toggleMenu(); // Close menu after language selection
+                      }}
+                      className="block px-4 py-2 text-primary hover:text-accent font-montserrat"
+                    >
+                      English
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      onClick={() => {
+                        changeLanguage('sw');
+                        toggleMenu(); // Close menu after language selection
+                      }}
+                      className="block px-4 py-2 text-primary hover:text-accent font-montserrat"
+                    >
+                      Swahili
+                    </button>
+                  </li>
+                </ul>
+              )}
             </li>
           </ul>
         )}

@@ -185,34 +185,6 @@ const EquipmentSection = () => {
             </button>
           </div>
 
-          {/* Calibration Services */}
-          <div className="bg-white shadow-lg rounded-lg p-6 hover-section"  data-aos="zoom-in" data-aos-delay="100">
-            <div className="sliding-images mb-4 relative overflow-hidden w-full h-48">
-              <div className={`absolute flex w-[200%] h-full ${startSliding ? 'animate-slide-left' : ''}`}>
-                <img src="/images/Calb-1.jpg" alt="Calibration Services" className="w-1/2 h-full object-cover" />
-                <img src="/images/Calb-2.jpg" alt="Calibration Services 2" className="w-1/2 h-full object-cover" />
-                <img src="/images/Calb.jpg" alt="Calibration Services" className="w-1/2 h-full object-cover" />
-                <img src="/images/Calb-3.jpg" alt="Calibration Services 2" className="w-1/2 h-full object-cover" />
-              </div>
-            </div>
-            <h3 className="text-2xl font-semibold mt-4 font-body">Calibration Services</h3>
-            <p className="text-gray-600 mt-2 font-body">Ensure compliance with industry standards by regularly calibrating audiological equipment.</p>
-            
-            {expandedIndex === 6 && (
-              <div className="text-gray-600 mt-4 font-body">
-                <ul className="list-disc list-inside">
-                  <li><strong>Features:</strong> Expert technicians, prompt service, adherence to regulatory requirements.</li>
-                </ul>
-              </div>
-            )}
-            <button
-              className="mt-4 text-primary hover:text-accent font-body"
-              onClick={() => handleLearnMore(6)}
-            >
-              {expandedIndex === 6 ? "Show Less" : "Learn More"}
-            </button>
-          </div>
-
         </div>
       </div>
     </section>

@@ -248,8 +248,8 @@ const Services = () => {
           <div className="bg-white shadow-lg rounded-lg p-6 hover-section" data-aos="zoom-in" data-aos-delay="100">
             <div className="sliding-images mb-4 relative overflow-hidden w-full h-48">
               <div className={`absolute flex w-[200%] h-full ${startSliding ? 'animate-slide-left' : ''}`}>
-                {/* <img src="/images/AA-1.jpg" alt="Accessories 1" className="w-1/2 h-full object-cover" /> */}
-                <img src="/images/AA-2.jpg" alt="Accessories 2" className="w-1/2 h-full object-cover" />
+                <img src="/images/AA-1.jpg" alt="Accessories 1" className="w-1/2 h-full object-cover" />
+                {/* <img src="/images/AA-2.jpg" alt="Accessories 2" className="w-1/2 h-full object-cover" /> */}
                 <img src="/images/AA.jpg" alt="Accessories 2" className="w-1/2 h-full object-cover" />
                 <img src="/images/btr.jpg" alt="Accessories 2" className="w-1/2 h-full object-cover" />
               </div>
@@ -274,31 +274,58 @@ const Services = () => {
             </button>
           </div>
           {/* Hearing Aid Fitting & Programming */}
-<div className="bg-white shadow-lg rounded-lg p-6 hover-section" data-aos="zoom-in" data-aos-delay="100">
-  <div className="sliding-images mb-4 relative overflow-hidden w-full h-48">
-    <div className={`absolute flex w-[200%] h-full ${startSliding ? 'animate-slide-left' : ''}`}>
-      <img src="/images/fiting.jpg" alt="Hearing Aid Fitting 1" className="w-1/2 h-full object-cover" />
-      <img src="/images/fiting-1.jpg" alt="Hearing Aid Fitting 2" className="w-1/2 h-full object-cover" />
-    </div>
-  </div>
-  <h3 className="text-2xl font-semibold mt-4 font-body">Hearing Aid Fitting & Programming</h3>
-  <p className="text-gray-600 mt-2 font-body">We offer professional hearing aid fitting and precise programming to ensure optimal sound quality and comfort.</p>
-  
-  {expandedIndex === 7 && (
-    <div className="text-gray-600 mt-4 font-body">
-      <ul className="list-disc list-inside">
-        <li><strong>Customization:</strong> Each hearing aid is customized to meet your unique hearing needs for enhanced clarity and performance.</li>
-        <li><strong>Expert Team:</strong> Our expert team ensures the hearing aid is fitted for maximum comfort and effectiveness.</li>
-      </ul>
-    </div>
-  )}
-  <button
-    className="mt-4 text-primary hover:text-accent font-body"
-    onClick={() => handleLearnMore(7)}
-  >
-    {expandedIndex === 7 ? "Show Less" : "Learn More"}
-  </button>
-</div>
+          <div className="bg-white shadow-lg rounded-lg p-6 hover-section" data-aos="zoom-in" data-aos-delay="100">
+            <div className="sliding-images mb-4 relative overflow-hidden w-full h-48">
+              <div className={`absolute flex w-[200%] h-full ${startSliding ? 'animate-slide-left' : ''}`}>
+                <img src="/images/fiting.jpg" alt="Hearing Aid Fitting 1" className="w-1/2 h-full object-cover" />
+                <img src="/images/fiting-1.jpg" alt="Hearing Aid Fitting 2" className="w-1/2 h-full object-cover" />
+              </div>
+            </div>
+            <h3 className="text-2xl font-semibold mt-4 font-body">Hearing Aid Fitting & Programming</h3>
+            <p className="text-gray-600 mt-2 font-body">We offer professional hearing aid fitting and precise programming to ensure optimal sound quality and comfort.</p>
+            
+            {expandedIndex === 7 && (
+              <div className="text-gray-600 mt-4 font-body">
+                <ul className="list-disc list-inside">
+                  <li><strong>Customization:</strong> Each hearing aid is customized to meet your unique hearing needs for enhanced clarity and performance.</li>
+                  <li><strong>Expert Team:</strong> Our expert team ensures the hearing aid is fitted for maximum comfort and effectiveness.</li>
+                </ul>
+              </div>
+            )}
+            <button
+              className="mt-4 text-primary hover:text-accent font-body"
+              onClick={() => handleLearnMore(7)}
+            >
+              {expandedIndex === 7 ? "Show Less" : "Learn More"}
+            </button>
+          </div>
+          {/* Calibration Services */}
+          <div className="bg-white shadow-lg rounded-lg p-6 hover-section"  data-aos="zoom-in" data-aos-delay="100">
+            <div className="sliding-images mb-4 relative overflow-hidden w-full h-48">
+              <div className={`absolute flex w-[200%] h-full ${startSliding ? 'animate-slide-left' : ''}`}>
+                <img src="/images/Calb-1.jpg" alt="Calibration Services" className="w-1/2 h-full object-cover" />
+                <img src="/images/Calb-2.jpg" alt="Calibration Services 2" className="w-1/2 h-full object-cover" />
+                <img src="/images/Calb.jpg" alt="Calibration Services" className="w-1/2 h-full object-cover" />
+                <img src="/images/Calb-3.jpg" alt="Calibration Services 2" className="w-1/2 h-full object-cover" />
+              </div>
+            </div>
+            <h3 className="text-2xl font-semibold mt-4 font-body">Calibration Services</h3>
+            <p className="text-gray-600 mt-2 font-body">Ensure compliance with industry standards by regularly calibrating audiological equipment.</p>
+            
+            {expandedIndex === 6 && (
+              <div className="text-gray-600 mt-4 font-body">
+                <ul className="list-disc list-inside">
+                  <li><strong>Features:</strong> Expert technicians, prompt service, adherence to regulatory requirements.</li>
+                </ul>
+              </div>
+            )}
+            <button
+              className="mt-4 text-primary hover:text-accent font-body"
+              onClick={() => handleLearnMore(6)}
+            >
+              {expandedIndex === 6 ? "Show Less" : "Learn More"}
+            </button>
+          </div>
 
 
         </div>
