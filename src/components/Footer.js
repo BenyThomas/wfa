@@ -34,8 +34,18 @@ const Footer = () => {
           {/* Visit Us Section */}
           <div>
             <h4 className="text-lg font-semibold font-body">Visit Us</h4>
-            <p className="mt-2 font-body">Chole Plaza 1st Floor, Bakhresa - Masaki, Dar es Salaam</p>
+            <p className="mt-2 font-body">
+              <a
+                href="https://maps.app.goo.gl/YP4SbJhgu2e3ywvb8"
+                target="_blank" // Opens the link in a new tab
+                rel="noopener noreferrer" // For security reasons
+                className="text-white hover:text-primary transition-colors duration-300"
+              >
+                Chole Plaza 1st Floor, Bakhresa - Masaki, Dar es Salaam
+              </a>
+            </p>
           </div>
+
         </div>
       </div>
     </footer>

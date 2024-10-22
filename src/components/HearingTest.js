@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import ToneGenerator from './ToneGenerator';
 import TestResults from './TestResults';
 import { Helmet } from 'react-helmet';
+import { FaCheck, FaTimes } from 'react-icons/fa';
 
 // Importing images for each frequency
 import image250Hz from '../assets/images/hearing-test-online-2.jpeg';
@@ -102,19 +103,27 @@ const HearingTest = () => {
                 <ToneGenerator frequency={frequencies[currentFrequency].freq} />
                 
                 <div className="mt-8 animate-fadeIn hover-section">
-                  <button
-                    className="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg mr-4 transform transition duration-300 ease-in-out hover:scale-105"
-                    onClick={() => handleResponse(true)}
-                  >
-                    <i className="fas fa-check font-body"></i> I Can Hear It
-                  </button>
-                  <button
-                    className="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-lg transform transition duration-300 ease-in-out hover:scale-105"
-                    onClick={() => handleResponse(false)}
-                  >
-                    <i className="fas fa-times font-body"></i> I Cannot Hear It
-                  </button>
+                  <div className="inline-block mr-4"> {/* Use inline-block to keep buttons in a row */}
+                    <button
+                      className="flex items-center bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg transform transition duration-300 ease-in-out hover:scale-105"
+                      onClick={() => handleResponse(true)}
+                    >
+                      <FaCheck className="mr-2 text-white text-2xl font-body" /> {/* Add margin-right to space the icon and text */}
+                      Can Hear
+                    </button>
+                  </div>
+
+                  <div className="inline-block"> {/* Use inline-block to keep buttons in a row */}
+                    <button
+                      className="flex items-center bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-lg transform transition duration-300 ease-in-out hover:scale-105"
+                      onClick={() => handleResponse(false)}
+                    >
+                      <FaTimes className="mr-2 text-white text-2xl font-body" /> {/* Add margin-right to space the icon and text */}
+                      Can't Hear
+                    </button>
+                  </div>
                 </div>
+
               </>
             )}
 
