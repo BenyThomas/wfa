@@ -26,13 +26,13 @@ const Navbar = () => {
   const toggleLanguageDropdown = () => {
     setIsLanguageDropdownOpen(!isLanguageDropdownOpen);
     setIsAboutDropdownOpen(false); // Close the About Us dropdown if Language dropdown is opened
-    setIsMenuOpen(false); // Close the mobile menu when language dropdown is opened
   };
 
   // Language switcher function
   const changeLanguage = (language) => {
     i18n.changeLanguage(language);
     setIsLanguageDropdownOpen(false); // Close the language dropdown after selection
+    setIsMenuOpen(false); // Close the mobile menu after selecting language
   };
 
   // Close dropdowns when clicking outside
@@ -57,6 +57,16 @@ const Navbar = () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, []);
+
+  // Scroll to section and close menu
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMenuOpen(false); // Close the mobile menu after navigation
+    setIsAboutDropdownOpen(false); // Close About dropdown
+  };
 
   return (
     <nav className="bg-white shadow-md p-4 fixed w-full top-0 z-50">
@@ -145,6 +155,7 @@ const Navbar = () => {
                   <a
                     href="#about"
                     className="block px-4 py-2 text-primary hover:text-accent font-montserrat"
+                    onClick={() => scrollToSection('about')}
                   >
                     {t('about_us')}
                   </a>
@@ -153,6 +164,7 @@ const Navbar = () => {
                   <a
                     href="#technology"
                     className="block px-4 py-2 text-primary hover:text-accent font-montserrat"
+                    onClick={() => scrollToSection('technology')}
                   >
                     {t('technology')}
                   </a>
@@ -161,6 +173,7 @@ const Navbar = () => {
                   <a
                     href="#testimonials"
                     className="block px-4 py-2 text-primary hover:text-accent font-montserrat"
+                    onClick={() => scrollToSection('testimonials')}
                   >
                     {t('testimonials')}
                   </a>
@@ -250,7 +263,7 @@ const Navbar = () => {
                     <a
                       href="#about"
                       className="text-primary hover:text-accent font-montserrat font-semibold font-body"
-                      onClick={toggleMenu}
+                      onClick={() => scrollToSection('about')}
                     >
                       {t('about_us')}
                     </a>
@@ -259,7 +272,7 @@ const Navbar = () => {
                     <a
                       href="#technology"
                       className="text-primary hover:text-accent font-montserrat font-semibold font-body"
-                      onClick={toggleMenu}
+                      onClick={() => scrollToSection('technology')}
                     >
                       {t('technology')}
                     </a>
@@ -268,7 +281,7 @@ const Navbar = () => {
                     <a
                       href="#testimonials"
                       className="text-primary hover:text-accent font-montserrat font-semibold font-body"
-                      onClick={toggleMenu}
+                      onClick={() => scrollToSection('testimonials')}
                     >
                       {t('testimonials')}
                     </a>
