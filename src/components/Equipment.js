@@ -188,10 +188,10 @@ const EquipmentSection = () => {
           <div className="bg-white shadow-lg rounded-lg p-6 hover-section"  data-aos="zoom-in" data-aos-delay="100">
             <div className="sliding-images mb-4 relative overflow-hidden w-full h-48">
               <div className={`absolute flex w-[200%] h-full ${startSliding ? 'animate-slide-left' : ''}`}>
-                <img src="/images/c1.jpg" alt="Soundproof Booths" className="w-1/2 h-full object-cover" />
-                <img src="/images/c2.jpg" alt="Soundproof Booths 2" className="w-1/2 h-full object-cover" />
-                <img src="/images/c3.jpg" alt="Soundproof Booths 2" className="w-1/2 h-full object-cover" />
-                <img src="/images/c4.jpg" alt="Soundproof Booths 2" className="w-1/2 h-full object-cover" />
+                <img src="/images/c1.jpg" alt="Customized Earmold Making" className="w-1/2 h-full object-cover" />
+                <img src="/images/c2.jpg" alt="Customized Earmold Making" className="w-1/2 h-full object-cover" />
+                <img src="/images/c3.jpg" alt="Customized Earmold Making" className="w-1/2 h-full object-cover" />
+                <img src="/images/c4.jpg" alt="Customized Earmold Making" className="w-1/2 h-full object-cover" />
               </div>
             </div>
             <h3 className="text-2xl font-semibold mt-4 font-body">Customized Earmold Making</h3>
