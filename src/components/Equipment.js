@@ -184,6 +184,33 @@ const EquipmentSection = () => {
               {expandedIndex === 5 ? "Show Less" : "Learn More"}
             </button>
           </div>
+          {/* Customized Earmold Making */}
+          <div className="bg-white shadow-lg rounded-lg p-6 hover-section"  data-aos="zoom-in" data-aos-delay="100">
+            <div className="sliding-images mb-4 relative overflow-hidden w-full h-48">
+              <div className={`absolute flex w-[200%] h-full ${startSliding ? 'animate-slide-left' : ''}`}>
+                <img src="/images/c1.jpg" alt="Soundproof Booths" className="w-1/2 h-full object-cover" />
+                <img src="/images/c2.jpg" alt="Soundproof Booths 2" className="w-1/2 h-full object-cover" />
+                <img src="/images/c3.jpg" alt="Soundproof Booths 2" className="w-1/2 h-full object-cover" />
+                <img src="/images/c4.jpg" alt="Soundproof Booths 2" className="w-1/2 h-full object-cover" />
+              </div>
+            </div>
+            <h3 className="text-2xl font-semibold mt-4 font-body">Customized Earmold Making</h3>
+            <p className="text-gray-600 mt-2 font-body">Offering precision-crafted, customized earmolds designed to ensure a comfortable.</p>
+            
+            {expandedIndex === 5 && (
+              <div className="text-gray-600 mt-4 font-body">
+                <ul className="list-disc list-inside">
+                  <li><strong>Features:</strong>Secure fit for optimal sound quality and protection, tailored to individual needs.</li>
+                </ul>
+              </div>
+            )}
+            <button
+              className="mt-4 text-primary hover:text-accent font-body"
+              onClick={() => handleLearnMore(5)}
+            >
+              {expandedIndex === 5 ? "Show Less" : "Learn More"}
+            </button>
+          </div>
 
         </div>
       </div>
